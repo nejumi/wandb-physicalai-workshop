@@ -1,0 +1,2 @@
+[console_scripts]
+physical-ai-workshop = physical_ai_workshop.cli:main

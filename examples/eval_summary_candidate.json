@@ -1,0 +1,33 @@
+{
+  "tag": "example-candidate",
+  "metrics": {
+    "success_rate": 0.8,
+    "avg_reward": 52.4,
+    "avg_steps": 118.3,
+    "avg_max_coverage": 0.91,
+    "avg_final_coverage": 0.88,
+    "num_episodes": 20
+  },
+  "episodes": [
+    {"episode_id": "example-cand-000", "seed": 1000, "success": true,  "max_coverage": 0.99, "final_coverage": 0.99, "reward_sum": 72.0, "steps": 98,  "failure_mode": "none"},
+    {"episode_id": "example-cand-001", "seed": 1001, "success": true,  "max_coverage": 0.99, "final_coverage": 0.99, "reward_sum": 71.3, "steps": 92,  "failure_mode": "none"},
+    {"episode_id": "example-cand-002", "seed": 1002, "success": true,  "max_coverage": 0.97, "final_coverage": 0.97, "reward_sum": 63.1, "steps": 112, "failure_mode": "none"},
+    {"episode_id": "example-cand-003", "seed": 1003, "success": true,  "max_coverage": 0.98, "final_coverage": 0.98, "reward_sum": 69.2, "steps": 104, "failure_mode": "none"},
+    {"episode_id": "example-cand-004", "seed": 1004, "success": false, "max_coverage": 0.12, "final_coverage": 0.08, "reward_sum": 2.1,  "steps": 300, "failure_mode": "no_contact"},
+    {"episode_id": "example-cand-005", "seed": 1005, "success": true,  "max_coverage": 0.99, "final_coverage": 0.99, "reward_sum": 74.6, "steps": 95,  "failure_mode": "none"},
+    {"episode_id": "example-cand-006", "seed": 1006, "success": true,  "max_coverage": 0.96, "final_coverage": 0.96, "reward_sum": 58.3, "steps": 125, "failure_mode": "none"},
+    {"episode_id": "example-cand-007", "seed": 1007, "success": true,  "max_coverage": 0.98, "final_coverage": 0.98, "reward_sum": 68.7, "steps": 108, "failure_mode": "none"},
+    {"episode_id": "example-cand-008", "seed": 1008, "success": true,  "max_coverage": 0.97, "final_coverage": 0.97, "reward_sum": 61.5, "steps": 120, "failure_mode": "none"},
+    {"episode_id": "example-cand-009", "seed": 1009, "success": true,  "max_coverage": 0.98, "final_coverage": 0.98, "reward_sum": 67.9, "steps": 102, "failure_mode": "none"},
+    {"episode_id": "example-cand-010", "seed": 1010, "success": true,  "max_coverage": 0.99, "final_coverage": 0.99, "reward_sum": 75.1, "steps": 99,  "failure_mode": "none"},
+    {"episode_id": "example-cand-011", "seed": 1011, "success": false, "max_coverage": 0.82, "final_coverage": 0.70, "reward_sum": 24.0, "steps": 300, "failure_mode": "near_miss"},
+    {"episode_id": "example-cand-012", "seed": 1012, "success": true,  "max_coverage": 0.97, "final_coverage": 0.97, "reward_sum": 60.6, "steps": 128, "failure_mode": "none"},
+    {"episode_id": "example-cand-013", "seed": 1013, "success": true,  "max_coverage": 0.98, "final_coverage": 0.98, "reward_sum": 69.3, "steps": 101, "failure_mode": "none"},
+    {"episode_id": "example-cand-014", "seed": 1014, "success": false, "max_coverage": 0.07, "final_coverage": 0.04, "reward_sum": 1.1,  "steps": 300, "failure_mode": "no_contact"},
+    {"episode_id": "example-cand-015", "seed": 1015, "success": true,  "max_coverage": 0.98, "final_coverage": 0.98, "reward_sum": 66.4, "steps": 110, "failure_mode": "none"},
+    {"episode_id": "example-cand-016", "seed": 1016, "success": true,  "max_coverage": 0.97, "final_coverage": 0.97, "reward_sum": 62.0, "steps": 115, "failure_mode": "none"},
+    {"episode_id": "example-cand-017", "seed": 1017, "success": false, "max_coverage": 0.58, "final_coverage": 0.45, "reward_sum": 11.2, "steps": 200, "failure_mode": "unstable_push"},
+    {"episode_id": "example-cand-018", "seed": 1018, "success": true,  "max_coverage": 0.99, "final_coverage": 0.99, "reward_sum": 73.8, "steps": 97,  "failure_mode": "none"},
+    {"episode_id": "example-cand-019", "seed": 1019, "success": true,  "max_coverage": 0.96, "final_coverage": 0.96, "reward_sum": 59.5, "steps": 122, "failure_mode": "none"}
+  ]
+}

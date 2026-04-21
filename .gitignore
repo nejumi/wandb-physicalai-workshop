@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+workspace/
+wandb/
+slurm-logs/
+.env
+.weave-cache/
+
+# Instructor-only docs (內部用・追跡外)
+docs/tech-stack-primer.md
+docs/instructor-runbook.md
+docs/session-agenda-120min.md
+INSTRUCTOR_GUIDE.md

@@ -1,0 +1,15 @@
+numpy
+torch
+
+[dev]
+pytest>=8
+
+[lerobot]
+lerobot[pusht]==0.4.4
+
+[wandb]
+wandb>=0.19
+imageio[ffmpeg]
+
+[weave]
+weave>=0.51

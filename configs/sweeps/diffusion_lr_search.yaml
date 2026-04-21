@@ -1,0 +1,40 @@
+# W&B Sweep: Diffusion Policy learning-rate search on PushT.
+#
+# Launch:
+#   wandb sweep configs/sweeps/diffusion_lr_search.yaml
+#   wandb agent <entity>/<project>/<sweep_id>
+#
+# Each agent trains a short 2k-step run so a 10-run grid fits in an hour
+# on a single H100. Swap `method` to `bayes` for a smarter search.
+
+program: scripts/01_train_diffusion_pusht.py
+method: grid
+metric:
+  name: train/loss
+  goal: minimize
+
+parameters:
+  steps:
+    value: 2000
+  batch-size:
+    value: 64
+  save-freq:
+    value: 2000
+  eval-freq:
+    value: 0
+  log-freq:
+    value: 50
+  wandb-project:
+    value: physical-ai-workshop
+  output-dir:
+    value: workspace/runs/sweep
+  run-name:
+    value: sweep
+  seed:
+    values: [42, 1337]
+
+command:
+  - ${env}
+  - python
+  - ${program}
+  - ${args}

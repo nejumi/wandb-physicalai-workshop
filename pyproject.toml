@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "physical-ai-wandb-workshop"
+version = "0.2.0"
+description = "Physical AI workshop: LeRobot + PushT + W&B Models + W&B Weave end-to-end."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [
+  { name = "W&B Physical AI Workshop" }
+]
+dependencies = [
+  "numpy",
+  "torch",
+]
+
+[project.optional-dependencies]
+wandb = ["wandb>=0.19", "imageio[ffmpeg]"]
+weave = ["weave>=0.51"]
+lerobot = ["lerobot[pusht]==0.4.4"]
+dev = ["pytest>=8"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[project.scripts]
+physical-ai-workshop = "physical_ai_workshop.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

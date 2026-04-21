@@ -1,0 +1,33 @@
+{
+  "tag": "example-baseline",
+  "metrics": {
+    "success_rate": 0.6,
+    "avg_reward": 35.8,
+    "avg_steps": 148.5,
+    "avg_max_coverage": 0.78,
+    "avg_final_coverage": 0.71,
+    "num_episodes": 20
+  },
+  "episodes": [
+    {"episode_id": "example-ep-000", "seed": 1000, "success": true,  "max_coverage": 0.98, "final_coverage": 0.98, "reward_sum": 62.1, "steps": 112, "failure_mode": "none"},
+    {"episode_id": "example-ep-001", "seed": 1001, "success": true,  "max_coverage": 0.96, "final_coverage": 0.96, "reward_sum": 57.4, "steps": 98,  "failure_mode": "none"},
+    {"episode_id": "example-ep-002", "seed": 1002, "success": false, "max_coverage": 0.92, "final_coverage": 0.81, "reward_sum": 28.2, "steps": 300, "failure_mode": "near_miss"},
+    {"episode_id": "example-ep-003", "seed": 1003, "success": true,  "max_coverage": 0.99, "final_coverage": 0.99, "reward_sum": 70.0, "steps": 104, "failure_mode": "none"},
+    {"episode_id": "example-ep-004", "seed": 1004, "success": false, "max_coverage": 0.08, "final_coverage": 0.04, "reward_sum": 1.2,  "steps": 300, "failure_mode": "no_contact"},
+    {"episode_id": "example-ep-005", "seed": 1005, "success": true,  "max_coverage": 0.97, "final_coverage": 0.97, "reward_sum": 64.8, "steps": 121, "failure_mode": "none"},
+    {"episode_id": "example-ep-006", "seed": 1006, "success": false, "max_coverage": 0.55, "final_coverage": 0.38, "reward_sum": 9.4,  "steps": 180, "failure_mode": "unstable_push"},
+    {"episode_id": "example-ep-007", "seed": 1007, "success": true,  "max_coverage": 0.98, "final_coverage": 0.98, "reward_sum": 66.5, "steps": 134, "failure_mode": "none"},
+    {"episode_id": "example-ep-008", "seed": 1008, "success": false, "max_coverage": 0.60, "final_coverage": 0.52, "reward_sum": 12.8, "steps": 210, "failure_mode": "unstable_push"},
+    {"episode_id": "example-ep-009", "seed": 1009, "success": true,  "max_coverage": 0.96, "final_coverage": 0.96, "reward_sum": 58.9, "steps": 110, "failure_mode": "none"},
+    {"episode_id": "example-ep-010", "seed": 1010, "success": true,  "max_coverage": 0.99, "final_coverage": 0.99, "reward_sum": 72.3, "steps": 117, "failure_mode": "none"},
+    {"episode_id": "example-ep-011", "seed": 1011, "success": false, "max_coverage": 0.40, "final_coverage": 0.28, "reward_sum": 6.5,  "steps": 200, "failure_mode": "unstable_push"},
+    {"episode_id": "example-ep-012", "seed": 1012, "success": true,  "max_coverage": 0.95, "final_coverage": 0.95, "reward_sum": 55.0, "steps": 145, "failure_mode": "none"},
+    {"episode_id": "example-ep-013", "seed": 1013, "success": true,  "max_coverage": 0.98, "final_coverage": 0.98, "reward_sum": 68.1, "steps": 106, "failure_mode": "none"},
+    {"episode_id": "example-ep-014", "seed": 1014, "success": false, "max_coverage": 0.05, "final_coverage": 0.03, "reward_sum": 0.9,  "steps": 300, "failure_mode": "no_contact"},
+    {"episode_id": "example-ep-015", "seed": 1015, "success": true,  "max_coverage": 0.97, "final_coverage": 0.97, "reward_sum": 62.5, "steps": 125, "failure_mode": "none"},
+    {"episode_id": "example-ep-016", "seed": 1016, "success": true,  "max_coverage": 0.96, "final_coverage": 0.96, "reward_sum": 57.2, "steps": 130, "failure_mode": "none"},
+    {"episode_id": "example-ep-017", "seed": 1017, "success": false, "max_coverage": 0.70, "final_coverage": 0.61, "reward_sum": 18.4, "steps": 240, "failure_mode": "unstable_push"},
+    {"episode_id": "example-ep-018", "seed": 1018, "success": true,  "max_coverage": 0.98, "final_coverage": 0.98, "reward_sum": 70.8, "steps": 118, "failure_mode": "none"},
+    {"episode_id": "example-ep-019", "seed": 1019, "success": false, "max_coverage": 0.91, "final_coverage": 0.85, "reward_sum": 27.9, "steps": 300, "failure_mode": "near_miss"}
+  ]
+}
