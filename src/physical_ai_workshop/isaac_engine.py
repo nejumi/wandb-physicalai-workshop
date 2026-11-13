@@ -60,10 +60,7 @@ class IsaacTrainArgs:
     extra: List[str] = field(default_factory=list)
 
 
-ISAACLAB_TRAIN_SCRIPT = os.environ.get(
-    "ISAACLAB_RSL_RL_TRAIN",
-    "/mnt/home/yyamamoto+cwb607/IsaacLab/scripts/reinforcement_learning/rsl_rl/train.py",
-)
+ISAACLAB_TRAIN_SCRIPT = os.environ.get("ISAACLAB_RSL_RL_TRAIN")
 
 
 def build_isaac_command(args: IsaacTrainArgs) -> List[str]:
@@ -73,18 +70,23 @@ def build_isaac_command(args: IsaacTrainArgs) -> List[str]:
     ``--log_project_name`` as first-class flags, so metrics/videos stream to
     W&B natively. Entity + tags come from env vars (``WANDB_ENTITY`` etc.).
     """
-    cmd: List[str] = [
-        sys.executable,
-        ISAACLAB_TRAIN_SCRIPT,
+    cmd: List[str] = [sys.executable]
+    if ISAACLAB_TRAIN_SCRIPT:
+        cmd.append(ISAACLAB_TRAIN_SCRIPT)
+    else:
+        cmd += ["-m", "isaaclab_rl.scripts.rsl_rl.train"]
+    cmd += [
         f"--task={args.task}",
         f"--num_envs={args.num_envs}",
         f"--max_iterations={args.max_iterations}",
         f"--seed={args.seed}",
         "--headless",
         "--logger=wandb",
-        f"--log_project_name={args.wandb_project}",
+        f"--wandb_project={args.wandb_project}",
         f"--run_name={args.run_name}",
     ]
+    if args.wandb_entity:
+        cmd.append(f"--wandb_entity={args.wandb_entity}")
     if args.record_video:
         cmd += [
             "--video",

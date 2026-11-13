@@ -16,7 +16,7 @@ jobs:
       - name: Install CPU-only deps
         run: |
           pip install --upgrade pip
-          pip install numpy pytest
+          pip install numpy pytest gym-pusht
           pip install --index-url https://download.pytorch.org/whl/cpu torch
       - name: Run tests
         run: pytest -q
