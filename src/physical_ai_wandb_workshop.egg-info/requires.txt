@@ -7,6 +7,16 @@ pytest>=8
 [lerobot]
 lerobot[pusht]==0.4.4
 
+[quickstart]
+wandb[media]<1,>=0.21
+python-dotenv>=1.0
+matplotlib>=3.8
+imageio>=2.34
+imageio-ffmpeg>=0.5
+
+[quickstart:python_version >= "3.12"]
+lerobot[dataset]<0.8,>=0.7
+
 [wandb]
 wandb>=0.19
 imageio[ffmpeg]

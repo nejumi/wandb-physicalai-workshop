@@ -21,11 +21,27 @@ dependencies = [
 wandb = ["wandb>=0.19", "imageio[ffmpeg]"]
 weave = ["weave>=0.51"]
 lerobot = ["lerobot[pusht]==0.4.4"]
+quickstart = [
+  "wandb[media]>=0.21,<1",
+  "python-dotenv>=1.0",
+  "matplotlib>=3.8",
+  "imageio>=2.34",
+  "imageio-ffmpeg>=0.5",
+  "lerobot[dataset]>=0.7,<0.8; python_version >= '3.12'",
+]
 dev = ["pytest>=8"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["src"]
+
+[tool.uv]
+conflicts = [
+  [
+    { extra = "lerobot" },
+    { extra = "quickstart" },
+  ],
+]
 
 [project.scripts]
 physical-ai-workshop = "physical_ai_workshop.cli:main"

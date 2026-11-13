@@ -1,5 +1,22 @@
 # Physical AI W&B Workshop
 
+## Colab T4 quickstart（短時間講座）
+
+週明けの入門講座では、次の Notebook を上から順に実行します。Colab の
+`ランタイム > ランタイムのタイプを変更 > T4 GPU` を選択してください。
+
+| Lab | Colab | 所要時間 | W&B へ残るもの |
+|---|---|---:|---|
+| LeRobot tiny behavior cloning | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nejumi/wandb-physicalai-workshop/blob/main/notebooks/01_lerobot_wandb_quickstart.ipynb) | 15–20分 | loss、model Artifact、rollout video |
+| Isaac Lab Cartpole PPO | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nejumi/wandb-physicalai-workshop/blob/main/notebooks/02_isaac_lab_wandb_quickstart.ipynb) | 20–25分 | reward / loss、checkpoint Artifact、simulation video |
+
+LeRobot Lab は外部データや実機なしで完走します。Isaac Lab Lab は GUI 版 Isaac
+Sim ではなく standalone Newton backend を使うため、Colab T4 で headless 実行できます。
+両 Lab とも metric / checkpoint / video を同じ W&B Run にまとめます。
+
+最後に [wandb/ART-Embodied の紹介](docs/art_embodied_intro.md) を5〜10分行います。
+より長い H100 / cluster 向け教材は、この README の後半にそのまま残しています。
+
 End-to-end workshop that trains a LeRobot policy on PushT, evaluates it with
 rollout videos, compares two candidates, and promotes the best one into W&B
 Models — with rollout traces streamed into W&B Weave.

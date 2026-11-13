@@ -21,6 +21,7 @@ src/physical_ai_workshop/train_engine.py
 src/physical_ai_workshop/weave_scorers.py
 tests/test_art_critic.py
 tests/test_cli.py
+tests/test_colab_quickstarts.py
 tests/test_compare.py
 tests/test_isaac_engine.py
 tests/test_rollout.py
