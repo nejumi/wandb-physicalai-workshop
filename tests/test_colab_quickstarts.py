@@ -41,5 +41,5 @@ def test_isaac_colab_uses_checked_subprocesses_for_python_paths():
     path = ROOT / "notebooks" / "02_isaac_lab_wandb_quickstart.ipynb"
     notebook = json.loads(path.read_text())
     all_source = "\n".join("".join(cell.get("source", [])) for cell in notebook["cells"])
-    assert "subprocess.run(['bash', str(script)], check=True" in all_source
+    assert "subprocess.Popen(['bash', str(script)]" in all_source
     assert "bash {workshop}/scripts/10_run_isaac_colab.sh" not in all_source

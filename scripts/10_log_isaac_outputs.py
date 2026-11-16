@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 import os
 from pathlib import Path
 
@@ -42,9 +43,22 @@ def main() -> None:
             "artifact": "isaaclab-cartpole-policy",
             "video": "eval/simulation",
         }
-        print(f"appended checkpoint and video to {run.url or 'offline run'}")
+        mode = run.settings.mode
+        run_info = {
+            "run_id": args.run_id,
+            "mode": mode,
+            "url": run.url if mode == "online" else None,
+            "project": run.project,
+            "entity": run.entity,
+        }
+
+    # Persist after finish so the notebook can display the completed run independently of subprocess stdout.
+    (args.log_root / "wandb-run.json").write_text(json.dumps(run_info, indent=2))
+    if run_info["url"]:
+        print(f"W&B Run: {run_info['url']}", flush=True)
+    else:
+        print(f"W&B mode={mode}: no online Run URL was created.", flush=True)
 
 
 if __name__ == "__main__":
     main()
-
