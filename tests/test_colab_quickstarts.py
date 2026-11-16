@@ -36,3 +36,10 @@ def test_colab_notebooks_have_badges_and_valid_json():
         assert "colab.research.google.com/assets/colab-badge.svg" in all_source
         assert "T4" in all_source
 
+
+def test_isaac_colab_uses_checked_subprocesses_for_python_paths():
+    path = ROOT / "notebooks" / "02_isaac_lab_wandb_quickstart.ipynb"
+    notebook = json.loads(path.read_text())
+    all_source = "\n".join("".join(cell.get("source", [])) for cell in notebook["cells"])
+    assert "subprocess.run(['bash', str(script)], check=True" in all_source
+    assert "bash {workshop}/scripts/10_run_isaac_colab.sh" not in all_source
