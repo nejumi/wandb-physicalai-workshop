@@ -11,8 +11,13 @@
 | Isaac Lab Cartpole PPO | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nejumi/wandb-physicalai-workshop/blob/main/notebooks/02_isaac_lab_wandb_quickstart.ipynb) | 20–25分 | reward / loss、checkpoint Artifact、simulation video |
 
 LeRobot Lab は外部データや実機なしで完走します。Isaac Lab Lab は GUI 版 Isaac
-Sim ではなく standalone Newton backend を使うため、Colab T4 で headless 実行できます。
+Sim ではなく standalone Newton backend を使う構成です。
 両 Lab とも metric / checkpoint / video を同じ W&B Run にまとめます。
+
+検証範囲: ローカル TITAN RTX でスクリプトを実行済みです。
+Google Colab T4 実環境での全セル完走は未確認です。CI は CPU テストであり、
+Colab や GPU の動作を保証するものではありません。
+Isaac Lab はカーネルの Python と分離した Python 3.12 環境で実行します。
 
 最後に [wandb/ART-Embodied の紹介](docs/art_embodied_intro.md) を5〜10分行います。
 より長い H100 / cluster 向け教材は、この README の後半にそのまま残しています。
